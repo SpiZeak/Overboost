@@ -8,5 +8,12 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true
+      }
+    }
   }
 })
