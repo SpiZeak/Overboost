@@ -1,27 +1,26 @@
 import { useState } from 'react'
 import logo from '../../images/logo.svg'
-import './App.scss'
-import { Button } from '@rmwc/button';
+import styles from './App.module.scss'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.App}>
+      <header className={styles.AppHeader}>
+        <img src={logo} className={styles.AppLogo} alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <Button onClick={() => setCount((count) => count + 1)}>
+          <button onClick={() => setCount((count) => count + 1)}>
             count is: {count}
-          </Button>
+          </button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
           <a
-            className="App-link"
+            className={styles.AppLink}
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,7 +29,7 @@ function App() {
           </a>
           {' | '}
           <a
-            className="App-link"
+            className={styles.AppLink}
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
