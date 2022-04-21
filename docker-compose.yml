@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  web:
+    container_name: web
+    image: "node:17-alpine"
+    working_dir: /home/node
+    command: sh -c "yarn && yarn dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/home/node/
